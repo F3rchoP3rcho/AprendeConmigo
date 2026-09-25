@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardMaestroActivity">
+
+    <!-- Contenido principal -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ac_background">
+
+        <!-- Barra superior -->
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/configuracion"
+                android:src="@android:drawable/ic_menu_sort_by_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/ac_navy"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+        <!-- Contenido central -->
+        <LinearLayout
+            android:id="@+id/mainContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomNav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBar">
+
+            <TextView
+                android:id="@+id/tvSaludo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:textColor="@color/ac_text_primary"
+                android:textSize="17sp"
+                tools:text="Increíble!, Tu clase ha sido creada. Compártelo con tus alumnos" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/quien_va_a_usar_la_app"
+                android:textColor="@color/ac_text_secondary"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/btnGrupos"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_button_primary"
+                android:gravity="center"
+                android:text="@string/grupos"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btnFerchIa"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_button_primary"
+                android:gravity="center"
+                android:text="@string/prepararate_para_el_tema"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btnHistorial"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_button_primary"
+                android:gravity="center"
+                android:text="@string/historial"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <!-- Barra inferior -->
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:elevation="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/inicio"
+                android:src="@android:drawable/ic_menu_myplaces"
+                app:tint="@color/ac_navy" />
+
+            <ImageButton
+                android:id="@+id/navNotificaciones"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/notificaciones"
+                android:src="@android:drawable/ic_popup_reminder"
+                app:tint="@color/ac_text_secondary" />
+
+            <ImageButton
+                android:id="@+id/navGrupos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/grupos"
+                android:src="@android:drawable/ic_menu_agenda"
+                app:tint="@color/ac_text_secondary" />
+
+            <ImageButton
+                android:id="@+id/navPerfil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/perfil"
+                android:src="@android:drawable/ic_menu_myplaces"
+                app:tint="@color/ac_text_secondary" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Menú lateral -->
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp">
+
+        <TextView
+            android:id="@+id/tvNombreMaestro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/ac_text_primary"
+            android:textSize="17sp"
+            tools:text="Maestra Ana" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/soy_maestro_tutor"
+            android:textColor="@color/ac_text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/menuPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:text="@string/perfil"
+            android:textColor="@color/ac_text_primary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/menuNotificaciones"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/notificaciones"
+            android:textColor="@color/ac_text_primary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/menuConfiguracion"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/configuracion"
+            android:textColor="@color/ac_text_primary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/menuSerGrupos"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/ser_grupos"
+            android:textColor="@color/ac_text_primary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/menuTemario"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/temario"
+            android:textColor="@color/ac_text_primary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/menuHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/historial"
+            android:textColor="@color/ac_text_primary"
+            android:textSize="15sp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/menuCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical"
+            android:text="@string/cerrar_sesion"
+            android:textColor="@color/ac_error"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
