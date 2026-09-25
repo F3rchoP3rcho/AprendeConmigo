@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "366304205937",
+    "project_id": "aprendeconmigo-51286",
+    "storage_bucket": "aprendeconmigo-51286.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366304205937:android:5a043a56762100d5f78fd0",
+        "android_client_info": {
+          "package_name": "com.example.aprendeconmigo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfpjFwV-ke9rkin1ROMs5S5LPS2H8bQKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
